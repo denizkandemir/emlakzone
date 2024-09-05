@@ -50,6 +50,7 @@
    max-width: 600px;
    line-height: 30px;
    word-spacing: 3px;
+   font-weight: 400;
 }
 
 .header-info-container {
@@ -111,23 +112,39 @@
 }
 
 .header-bottom-content {
-    margin-top: 150px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
 }
 
 .header-img-p-container {
     display: flex;
     gap: 90px;
     justify-content: center;
-    margin-bottom: 80px;
 }
 
 .header-bottom-img {
-    object-fit: contain;
-    height: 300px;
+    object-fit: cover;
+    height: 340px;
+    max-width: 500px;
     border-radius: 10px;
 }
 
 .bottom-title {
   font-size: 30px;
   line-height: 35px;
+  color: rgba(2, 48, 71, 1);
+}
+
+.header-bottom-p {
+    max-width: 530px;
+    /* color: rgb(87 107 117);*/
+    color: rgba(2, 48, 71, 0.87); 
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    padding-top: 20px;
 }
