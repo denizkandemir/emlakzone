@@ -21,19 +21,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px 20px 70px 20px;
+    padding: 100px 20px 90px 20px;
 }
 
 .header-content-container {
     display: flex;
-    gap: 70px;
+    gap: 70px 0px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .header-img {
-    object-fit: contain;
-    height: 450px;
+    object-fit: cover;
+    max-height: 450px;
+    max-width: 500px;
 }
 
 .header-title {
@@ -91,8 +92,8 @@
 
 .navbar-logo {
     object-fit: contain;
-    width: 70px;
-    height: 70px;
+    max-width: 70px;
+    max-height: 70px;
 }
 
 .navbar-p {
@@ -112,24 +113,26 @@
 }
 
 .header-bottom-content {
-    margin-top: 80px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 150px;
+    gap: 120px;
+    padding: 0 20px;
 }
 
 .header-img-p-container {
     display: flex;
-    gap: 90px;
+    gap: 40px 90px;
     justify-content: center;
+    flex-wrap: wrap-reverse;
 }
 
 .header-bottom-img {
     object-fit: cover;
     height: 340px;
-    max-width: 500px;
+    max-width: 530px;
     border-radius: 10px;
 }
 
@@ -147,4 +150,12 @@
     padding: 0;
     margin: 0;
     padding-top: 20px;
+}
+
+.integrations-container {
+  margin-top: 80px;
+  padding: 40px 20px;
+  background-color: rgb(238, 242, 252);
+  /* background-color: rgb(244, 244, 244);  */
+  /* background-color: #f9f9f9; a very good grey*/
 }

@@ -759,9 +759,6 @@ p:last-child {
   background: #110f24;
 }
 
-.bg-light {
-  background: #f6f6f9;
-}
 
 .bg-primary {
   background: #575bde;
@@ -879,8 +876,6 @@ p:last-child {
   z-index: 0;
 }
 
-
-background: rgba(17, 15, 36, 0.7);
 
 /* Overlays */
 .overlay:before {
@@ -1496,24 +1491,7 @@ background: rgba(17, 15, 36, 0.7);
   }
 }
 
-@media only screen and (max-width: 479px) {
-  .button {
-    height: 3.5rem;
-    line-height: 3.5rem;
-  }
-  .button.button-s {
-    height: 2.5rem;
-    line-height: 2.5rem;
-  }
-  .button.button-m {
-    height: 3rem;
-    line-height: 3rem;
-  }
-  .button.button-l {
-    height: 4rem;
-    line-height: 4rem;
-  }
-}
+
 
 /* -----------------------------------------------------------------------------
 
@@ -1957,9 +1935,7 @@ form .form-help {
 }
 
 @media only screen and (max-width: 767px) {
-  .header-main {
-    position: fixed;
-  }
+
 
   .header-main a:not(.button):hover {
     color: #110f24;
@@ -2348,7 +2324,7 @@ table td {
 
 .page-onboarding .featured-image {
   height: 100%;
-  position: fixed;
+
   right: 0;
 }
 
