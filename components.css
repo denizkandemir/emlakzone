@@ -50,7 +50,7 @@
    margin-top: 10px;
    max-width: 600px;
    line-height: 30px;
-   word-spacing: 3px;
+   word-spacing: 1.5px;
    font-weight: 400;
 }
 
@@ -155,7 +155,41 @@
 .integrations-container {
   margin-top: 80px;
   padding: 40px 20px;
-  background-color: rgb(238, 242, 252);
-  /* background-color: rgb(244, 244, 244);  */
-  /* background-color: #f9f9f9; a very good grey*/
+  /* background-color: rgb(238, 242, 252); */
+  background-color: rgb(244, 244, 244); 
+  /* background-color: #f9f9f9;  */
+}
+
+
+
+.integrations-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 335px);
+    gap: 50px;
+    justify-content: center;
+    padding: 50px;
+}
+
+.integrations-wrapper {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 10px;
+}
+
+.integration-img {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.integrations-text-container {
+    padding: 20px 15px
+}
+
+.integrations-title {
+  color: rgb(2, 48, 71);
+  font-size: 24px;
+  font-weight: 600;
 }
