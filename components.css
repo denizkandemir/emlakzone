@@ -160,12 +160,18 @@
   /* background-color: #f9f9f9;  */
 }
 
-
+.integrations-main-title {
+    font-weight: 600;
+    font-size: 37px;
+    color: rgb(2, 48, 71);
+    margin: 15px 0;
+    text-align: center;
+}
 
 .integrations-cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 335px);
-    gap: 50px;
+    grid-template-columns: repeat(auto-fit, 345px);
+    gap: 70px 60px;
     justify-content: center;
     padding: 50px;
 }
@@ -174,6 +180,7 @@
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border-radius: 10px;
+    position: relative;
 }
 
 .integration-img {
@@ -185,11 +192,43 @@
 }
 
 .integrations-text-container {
-    padding: 20px 15px
+    padding: 20px 13px;
+    height: 240px;
 }
 
 .integrations-title {
   color: rgb(2, 48, 71);
   font-size: 24px;
   font-weight: 600;
+}
+
+.integrations-p {
+    color: rgba(2, 48, 71, 0.87); 
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.integrations-button-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px 22px 15px;
+    align-items: center;
+    
+}
+
+.integrations-logo {
+    object-fit: contain;
+    height: 70px;
+}
+
+.integrations-button {
+    padding: 12px 22px;
+    border-radius: 8px;
+    background-color: rgba(2, 48, 71,0.86);
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
 }

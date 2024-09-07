@@ -360,17 +360,6 @@ h6 {
 }
 
 
-
-p:last-child {
-  margin: 0;
-}
-
-.lead {
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 2rem;
-}
-
 @media only screen and (max-width: 479px) {
   .lead {
     font-size: 1.5rem;
@@ -378,16 +367,6 @@ p:last-child {
   }
 }
 
-.paragraph {
-  font-size: 1.25rem;
-  font-weight: 400;
-  letter-spacing: 0.3px;
-  line-height: 2rem;
-}
-
-.paragraph.serif {
-  font-family: "PT Serif", Georgia, serif;
-}
 
 @media only screen and (max-width: 479px) {
   .paragraph {
@@ -417,75 +396,7 @@ p:last-child {
   opacity: 0.9;
 }
 
-/* -----------------------------------------------------------------------------
 
-# Base - Grid
-
------------------------------------------------------------------------------ */
-.row {
-  display: table;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.row .col-one-half {
-  width: 48%;
-}
-
-.row .col-one-third {
-  width: 30.6666666667%;
-}
-
-.row .col-one-fourth {
-  width: 22%;
-}
-
-.row .col-one-fifth {
-  width: 16.8%;
-}
-
-.row .col-two-thirds {
-  width: 65.3333333333%;
-}
-
-.row .col-two-fourths {
-  width: 48%;
-}
-
-.row .col-two-fifths {
-  width: 37.6%;
-}
-
-.row .col-three-fourths {
-  width: 74%;
-}
-
-.row .col-three-fifths {
-  width: 58.4%;
-}
-
-.row .col-four-fifths {
-  width: 79.2%;
-}
-
-.row [class^="col-"] {
-  float: left;
-  margin: 0 2%;
-}
-
-.row [class^="col-"]:first-child {
-  margin-left: 0;
-}
-
-.row [class^="col-"]:last-child {
-  margin-right: 0;
-}
 
 @media only screen and (max-width: 1023px) {
   .row [class^="col-"] {
