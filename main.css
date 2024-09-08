@@ -154,9 +154,7 @@ html img {
   border-style: none;
 }
 
-html svg:not(:root) {
-  overflow: hidden;
-}
+
 
 html button, html input, html optgroup, html select, html textarea {
   font-family: sans-serif;

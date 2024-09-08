@@ -13,8 +13,6 @@ const integrations = [
         img: "imgs/sendingMail.jpg"
     },
 
-   
-
     {
         title: "Müşteri Takibi",
         text: "Müşteri takibi, satış sonrası müşteri memnuniyetini artırmak, sadakati güçlendirmek ve uzun vadeli ilişkiler kurmak için kritik bir süreçtir. Düzenli iletişim ve veri analizi, müşterilere uygun çözümler sunmaya ve müşteri memnuniyetini arttırmaya yardımcı olur.",
@@ -39,7 +37,7 @@ const integrations = [
         img: "imgs/mailIntegration.jpg"
     },
 
-    
+
 ]
 
 integrationsContainer.innerHTML = integrations.map((integration) => {
@@ -64,3 +62,57 @@ integrationsContainer.innerHTML = integrations.map((integration) => {
    </div>  
 `;
 }).join("");
+
+const questions = [
+
+    {
+        title: "Tapu devri nasıl yapılır?",
+        text: "Tapu devri, alıcı ve satıcının Tapu Müdürlüğü'ne giderek satış işlemini gerçekleştirmesi ile yapılır. Tapu işlemi sırasında, tarafların kimlik belgeleri, satış sözleşmesi ve gerekli harç ödemelerinin yapılmış olması gerekmektedir."
+    },
+
+    {
+        title: "Ev satın alma süreci nasıl işler?",
+        text: "Ev satın alma süreci genellikle şu adımlardan oluşur: ev arama, finansal durumundeğerlendirilmesi, mortgage başvurusu, evin incelenmesi, teklif sunma, tapu devri ve son olarak evin teslim alınması."
+    },
+
+    {
+        title: "Evi kiraladıktan sonra kiracı haklarım nelerdir?",
+        text: "Kiracı olarak, kira sözleşmesinde belirtilen şartlara uygun olarak evde oturma hakkına sahipsiniz. Ayrıca, ev sahibi tarafından izinsiz olarak eve girilmesi, kirada haksız artış yapılması gibi durumlar yasalarla korunur. Haklarınız, kira sözleşmesi ve ilgili kanunlarla güvence altındadır."
+    },
+
+    {
+        title: "Bir evi kiralamak için gereken belgeler nelerdir?",
+        text: "Kiralık bir ev için genellikle kimlik belgesi, maaş bordrosu, kira sözleşmesi ve bazı durumlarda kefil talep edilebilir. Kiraya veren ile kiracının karşılıklı olarak tüm şartları kabul ettiği bir kira sözleşmesi yapılır."
+    },
+
+    {
+        title: "Gayrimenkul yatırımı yaparken nelere dikkat edilmelidir?",
+        text: "Gayrimenkul yatırımı yaparken, yatırımın uzun vadeli getirisi, lokasyonun potansiyeli, piyasa koşulları, kira getirisi ve likidite durumu gibi faktörler dikkate alınmalıdır. Profesyonel bir gayrimenkul danışmanından yardım almak faydalı olabilir."
+    },
+];
+
+const questionsContainer = document.querySelector("#questions-container");
+
+questionsContainer.innerHTML += questions.map((question) => {
+  return `
+    <div class="sss-question-answer-container">
+          <div class="question-svg-container">
+            <p class="sss-p"> ${question.title} </p>
+            <i class="fa-solid sss-icon fa-angle-down" id="sss-icon"></i>          
+          </div>
+          <p class="answer-p">
+            ${question.text}
+          </p>
+    </div>
+  `
+}).join("");
+
+const questionDropdowns = questionsContainer.querySelectorAll("#sss-icon");
+
+questionDropdowns.forEach((dropdown) => {
+    dropdown.addEventListener("click", () => {
+        const answer = dropdown.closest(".sss-question-answer-container").querySelector(".answer-p");
+        answer.classList.toggle("active");
+        dropdown.classList.toggle("icon-up");
+    });
+})
