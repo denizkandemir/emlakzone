@@ -1,5 +1,3 @@
-const integrationsContainer = document.querySelector("#integrations-cards-container");
-
 const integrations = [
     {
         title: "Kontrat Takibi",
@@ -7,16 +5,17 @@ const integrations = [
         img: "imgs/contract.jpg"
     },
 
-    {
-        title: "Toplu Sms&Mail Gönderimi",
-        text: "Toplu SMS ve mail gönderimi, geniş kitlelere aynı anda hızlıca ulaşmanın en etkili yollarından biridir. Kampanyalar, duyurular veya hatırlatmalar için ideal bir çözüm sunar. Toplu mail ve sms göndererek, bilgilendirme ve pazarlama stratejilerinizi kolayca hayata geçirebilirsiniz.",
-        img: "imgs/sendingMail.jpg"
-    },
-
+   
     {
         title: "Müşteri Takibi",
         text: "Müşteri takibi, satış sonrası müşteri memnuniyetini artırmak, sadakati güçlendirmek ve uzun vadeli ilişkiler kurmak için kritik bir süreçtir. Düzenli iletişim ve veri analizi, müşterilere uygun çözümler sunmaya ve müşteri memnuniyetini arttırmaya yardımcı olur.",
         img: "imgs/client.jpg"
+    },
+
+    {
+        title: "Toplu Sms&Mail Gönderimi",
+        text: "Toplu SMS ve mail gönderimi, geniş kitlelere aynı anda hızlıca ulaşmanın en etkili yollarından biridir. Kampanyalar, duyurular veya hatırlatmalar için ideal bir çözüm sunar. Toplu mail ve sms göndererek, bilgilendirme ve pazarlama stratejilerinizi kolayca hayata geçirebilirsiniz.",
+        img: "imgs/sendingMail.jpg"
     },
 
     {
@@ -40,8 +39,31 @@ const integrations = [
 
 ]
 
-integrationsContainer.innerHTML = integrations.map((integration) => {
-    return `
+
+function handleSidebar() {
+    const sidebarOpener = document.querySelector("#sidebar-opener");
+    const overlay = document.querySelector("#overlay-div");
+    const sidebar = document.querySelector("#sidebar-container");
+    const sidebarCloser = document.querySelector("#sidebar-closer");
+
+    sidebarOpener.addEventListener(("click") , () => {
+       sidebar.classList.add("display-sidebar");
+       overlay.classList.add("blur");
+       document.body.classList.add("no-scroll");
+    });
+
+    sidebarCloser.addEventListener(("click") , () => {
+        sidebar.classList.remove("display-sidebar");
+        overlay.classList.remove("blur");
+        document.body.classList.remove("no-scroll");
+    });
+}
+
+function handleIntegrations() {
+    const integrationsContainer = document.querySelector("#integrations-cards-container");
+
+    integrationsContainer.innerHTML = integrations.map((integration) => {
+        return `
    <div class="integrations-wrapper">
       <div class="integrations-img-container">
         <img src="${integration.img}" class="integration-img" alt="">
@@ -61,7 +83,8 @@ integrationsContainer.innerHTML = integrations.map((integration) => {
        </div>
    </div>  
 `;
-}).join("");
+    }).join("");
+}
 
 const questions = [
 
@@ -70,7 +93,7 @@ const questions = [
         text: "Tapu devri, alıcı ve satıcının Tapu Müdürlüğü'ne giderek satış işlemini gerçekleştirmesi ile yapılır. Tapu işlemi sırasında, tarafların kimlik belgeleri, satış sözleşmesi ve gerekli harç ödemelerinin yapılmış olması gerekmektedir."
     },
 
-    
+
 
     {
         title: "Ev satın alma süreci nasıl işler?",
@@ -87,8 +110,8 @@ const questions = [
         title: "Ev satın alırken ekspertiz raporu zorunlu mudur?",
         text: "Konut kredisi ile ev alıyorsanız, bankalar genellikle ekspertiz raporu talep eder. Bu rapor, evin gerçek piyasa değerini belirlemek için bir uzman tarafından hazırlanır. Ancak, peşin ödeme ile ev alıyorsanız, ekspertiz raporu zorunlu değildir fakat alıcı açısından faydalı olabilir."
     },
- 
-    
+
+
     {
         title: "Bir evi kiralamak için gereken belgeler nelerdir?",
         text: "Kiralık bir ev için genellikle kimlik belgesi, maaş bordrosu, kira sözleşmesi ve bazı durumlarda kefil talep edilebilir. Kiraya veren ile kiracının karşılıklı olarak tüm şartları kabul ettiği bir kira sözleşmesi yapılır."
@@ -100,10 +123,14 @@ const questions = [
     },
 ];
 
-const questionsContainer = document.querySelector("#questions-container");
 
-questionsContainer.innerHTML += questions.map((question) => {
-  return `
+
+
+function handleQuestionDropdowns() {
+    const questionsContainer = document.querySelector("#questions-container");
+
+    questionsContainer.innerHTML += questions.map((question) => {
+        return `
     <div class="sss-question-answer-container">
           <div class="question-svg-container">
             <p class="sss-p"> ${question.title} </p>
@@ -114,14 +141,19 @@ questionsContainer.innerHTML += questions.map((question) => {
           </p>
     </div>
   `
-}).join("");
+    }).join("");
 
-const questionDropdowns = questionsContainer.querySelectorAll("#sss-icon");
+    const questionDropdowns = questionsContainer.querySelectorAll("#sss-icon");
 
-questionDropdowns.forEach((dropdown) => {
-    dropdown.addEventListener("click", () => {
-        const answer = dropdown.closest(".sss-question-answer-container").querySelector(".answer-p");
-        answer.classList.toggle("active");
-        dropdown.classList.toggle("icon-up");
-    });
-})
+    questionDropdowns.forEach((dropdown) => {
+        dropdown.addEventListener("click", () => {
+            const answer = dropdown.closest(".sss-question-answer-container").querySelector(".answer-p");
+            answer.classList.toggle("active");
+            dropdown.classList.toggle("icon-up");
+        });
+    })
+}
+
+handleSidebar();
+handleIntegrations();
+handleQuestionDropdowns();

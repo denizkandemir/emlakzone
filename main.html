@@ -11,71 +11,88 @@
   <title> Emlakzone </title>
 </head>
 
-<body class="page page-home preload">
-  <div class="sidebar-container">
-    <ul class="sidebar-content">
-      <li class="sidebar-p"><a href="index.html" class="sidebar-p"> Hazır Websiteler </a></li>
-      <li class="sidebar-p"><a href="pricing.html" class="sidebar-p"> Özellikler </a></li>
-      <li class="sidebar-p"><a href="about.html" class="sidebar-p"> Paketlerimiz </a></li>
-      <li class="sidebar-p"><a href="about.html" class="sidebar-p"> Hakkımızda </a></li>
-      <li class="sidebar-p"><a href="about.html" class="sidebar-p"> İletişim </a></li>
-    </ul>  
-  </div>
-  <div class="navbar-container">
-    <div class="logo-p-container">
-      <a href="main.html" class="logo" rel="home">
-        <img src="imgs/logo.png" class="navbar-logo" alt="">
-      </a>
-      <p class="logo-p">
-        Emlak Zone
-      </p>
+<body>
+  <main class="main-container">
+    <div class="sidebar-container" id="sidebar-container">
+      <ul class="sidebar-content">
+        <li class="sidebar-p"><a href="index.html" class="sidebar-p"> Hazır Websiteler </a></li>
+        <li class="sidebar-p"><a href="pricing.html" class="sidebar-p"> Özellikler </a></li>
+        <li class="sidebar-p"><a href="about.html" class="sidebar-p"> Paketlerimiz </a></li>
+        <li class="sidebar-p sidebar-bottom-p"><a href="about.html" class="sidebar-p"> Hakkımızda </a></li>
+        <li class="sidebar-p sidebar-bottom-p"><a href="about.html" class="sidebar-p"> İletişim </a></li>
+      </ul>
+      <svg width="45px" height="45px" class="sidebar-closer" id="sidebar-closer" viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <style>
+            .cls-2 {
+              fill: white;
+              stroke: white;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-width: 2px;
+            }
+          </style>
+        </defs>
+        <title></title>
+        <g id="cross">
+          <line class="cls-2" x1="7" x2="25" y1="7" y2="25"></line>
+          <line class="cls-2" x1="7" x2="25" y1="25" y2="7"></line>
+        </g>
+      </svg>
     </div>
-    <ul class="navbar-center-content">
-      <li><a href="index.html" class="navbar-p" class="active"> Hazır Websiteler </a></li>
-      <li><a href="pricing.html" class="navbar-p"> Özellikler </a></li>
-      <li><a href="about.html" class="navbar-p"> Paketlerimiz </a></li>
-    </ul>
-    <ul class="navbar-right-content">
-      <li><a href="about.html" class="navbar-p"> Hakkımızda </a></li>
-      <li><a href="about.html" class="navbar-p"> İletişim </a></li>
-      <div class="sidebar-svg-container">
-        <svg width="40px" height="40px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink">
-          <title>Menu</title>
-          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="Menu">
-              <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24"></rect>
-              <line x1="5" y1="7" x2="19" y2="7" id="Path" stroke="white" stroke-width="2" stroke-linecap="round"></line>
-              <line x1="5" y1="17" x2="19" y2="17" id="Path" stroke="white" stroke-width="2" stroke-linecap="round">
-              </line>
-              <line x1="5" y1="12" x2="19" y2="12" id="Path" stroke="white" stroke-width="2" stroke-linecap="round">
-              </line>
-            </g>
-          </g>
-        </svg>
-      </div>
-    </ul>
-  </div>
-
-  <main>
-    <section class="header-container  center-tablet dark overlay-hero">
-      <div class="header-content-container">
-        <div class="header-info-container">
-          <h1 class="header-title"> Emlak Zone İle Yeni Bir Hayatın Kapılarını Aralayın! </h1>
-          <p class="header-p"> Uzman kadromuz ve geniş ev kataloğumuz ile modern yaşam alanlarını ve fark yaratan
-            tasarımları keşfedin. </p>
-          <a href="" class="" role="button">
-            <button class="button header-button button-primary space-top">
-              Keşfet
-            </button>
+    <div class="overlay-div" id="overlay-div">
+      <div class="navbar-container">
+        <div class="logo-p-container">
+          <a href="main.html" class="logo" rel="home">
+            <img src="imgs/logo.png" class="navbar-logo" alt="">
           </a>
+          <p class="logo-p">
+            Emlak Zone
+          </p>
         </div>
-        <div class="header-img-container">
-          <img src="imgs/header-house.png" class="header-img" alt="Hero Illustration">
+        <ul class="navbar-center-content">
+          <li><a href="index.html" class="navbar-p" class="active"> Hazır Websiteler </a></li>
+          <li><a href="pricing.html" class="navbar-p"> Özellikler </a></li>
+          <li><a href="about.html" class="navbar-p"> Paketlerimiz </a></li>
+        </ul>
+        <ul class="navbar-center-content">
+          <li><a href="about.html" class="navbar-p"> Hakkımızda </a></li>
+          <li><a href="about.html" class="navbar-p"> İletişim </a></li>
+        </ul>
+        <div class="sidebar-svg-container" id="sidebar-opener">
+          <svg width="40px" height="40px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Menu</title>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Menu">
+                <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24"></rect>
+                <line x1="5" y1="7" x2="19" y2="7" id="Path" stroke="white" stroke-width="2" stroke-linecap="round">
+                </line>
+                <line x1="5" y1="17" x2="19" y2="17" id="Path" stroke="white" stroke-width="2" stroke-linecap="round">
+                </line>
+                <line x1="5" y1="12" x2="19" y2="12" id="Path" stroke="white" stroke-width="2" stroke-linecap="round">
+                </line>
+              </g>
+            </g>
+          </svg>
         </div>
-    </section>
-
-
+      </div>
+      <section class="header-container  center-tablet dark overlay-hero">
+        <div class="header-content-container">
+          <div class="header-info-container">
+            <h1 class="header-title"> Emlak Zone İle Yeni Bir Hayatın Kapılarını Aralayın! </h1>
+            <p class="header-p"> Uzman kadromuz ve geniş ev kataloğumuz ile modern yaşam alanlarını ve fark yaratan
+              tasarımları keşfedin. </p>
+             <button class="header-button">
+                <a href=""> Keşfet </a>
+              </button>
+          </div>
+          <div class="header-img-container">
+            <img src="imgs/header-house.png" class="header-img" alt="Hero Illustration">
+          </div>
+      </section>
+    </div>
     </div>
     <div class="header-bottom-content">
       <div class="header-img-p-container">
