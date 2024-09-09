@@ -70,6 +70,8 @@ const questions = [
         text: "Tapu devri, alıcı ve satıcının Tapu Müdürlüğü'ne giderek satış işlemini gerçekleştirmesi ile yapılır. Tapu işlemi sırasında, tarafların kimlik belgeleri, satış sözleşmesi ve gerekli harç ödemelerinin yapılmış olması gerekmektedir."
     },
 
+    
+
     {
         title: "Ev satın alma süreci nasıl işler?",
         text: "Ev satın alma süreci genellikle şu adımlardan oluşur: ev arama, finansal durumundeğerlendirilmesi, mortgage başvurusu, evin incelenmesi, teklif sunma, tapu devri ve son olarak evin teslim alınması."
@@ -80,14 +82,21 @@ const questions = [
         text: "Kiracı olarak, kira sözleşmesinde belirtilen şartlara uygun olarak evde oturma hakkına sahipsiniz. Ayrıca, ev sahibi tarafından izinsiz olarak eve girilmesi, kirada haksız artış yapılması gibi durumlar yasalarla korunur. Haklarınız, kira sözleşmesi ve ilgili kanunlarla güvence altındadır."
     },
 
+
+    {
+        title: "Ev satın alırken ekspertiz raporu zorunlu mudur?",
+        text: "Konut kredisi ile ev alıyorsanız, bankalar genellikle ekspertiz raporu talep eder. Bu rapor, evin gerçek piyasa değerini belirlemek için bir uzman tarafından hazırlanır. Ancak, peşin ödeme ile ev alıyorsanız, ekspertiz raporu zorunlu değildir fakat alıcı açısından faydalı olabilir."
+    },
+ 
+    
     {
         title: "Bir evi kiralamak için gereken belgeler nelerdir?",
         text: "Kiralık bir ev için genellikle kimlik belgesi, maaş bordrosu, kira sözleşmesi ve bazı durumlarda kefil talep edilebilir. Kiraya veren ile kiracının karşılıklı olarak tüm şartları kabul ettiği bir kira sözleşmesi yapılır."
     },
 
     {
-        title: "Gayrimenkul yatırımı yaparken nelere dikkat edilmelidir?",
-        text: "Gayrimenkul yatırımı yaparken, yatırımın uzun vadeli getirisi, lokasyonun potansiyeli, piyasa koşulları, kira getirisi ve likidite durumu gibi faktörler dikkate alınmalıdır. Profesyonel bir gayrimenkul danışmanından yardım almak faydalı olabilir."
+        title: "Konut satış işlemi sırasında emlakçı komisyonu ne kadar olur?",
+        text: "Türkiye'de emlakçı komisyonu, gayrimenkul satış bedelinin %2'si olarak belirlenmiştir ve genellikle hem alıcıdan hem de satıcıdan ayrı ayrı alınır. Ancak, taraflar arasında farklı bir anlaşma yapılabilir. Kiralama işlemlerinde ise emlakçı komisyonu genellikle bir aylık kira bedeli olarak alınır."
     },
 ];
 
