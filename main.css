@@ -150,12 +150,11 @@ a {
     padding: 12px 40px;
     border-radius: 8px;
     font-size: 16px;
-    background: rgb(98,98,175);
-    background: linear-gradient(180deg, rgba(98,98,175,1) 16%, rgba(87,91,222,1) 62%);
+    /* background: rgb(98,98,175);
+    background: linear-gradient(180deg, rgba(98,98,175,1) 16%, rgba(87,91,222,1) 62%); */
+    background-color: black;
     color: white;
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     margin-top: 15px;
     max-width: 120px;
 }
@@ -278,28 +277,50 @@ a {
     position: relative;
 }
 
+.integrations-img-container  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding-top: 10px;
+}
+
+.line-div {
+    background-color: rgb(2, 48, 71);
+    width: 120px;
+    height: 3px;
+    border-radius: 10px;
+    
+}
+
+
+.line-div-container {
+    display: flex;
+    justify-content: center;
+}
+
 .integration-img {
-    object-fit: cover;
-    height: 200px;
-    width: 100%;
+    object-fit: contain;
+    height: 55px;
+    width: 64px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 .integrations-text-container {
     padding: 20px 13px;
-    height: 240px;
+    height: 190px;
 }
 
 .integrations-title {
   color: rgb(2, 48, 71);
   font-size: 24px;
   font-weight: 600;
+  text-align: center;
 }
 
 .integrations-p {
     color: rgba(2, 48, 71, 0.87); 
-    margin-top: 15px;
     font-size: 16px;
     font-weight: 400;
     word-spacing: 1.5px;
@@ -320,10 +341,12 @@ a {
 }
 
 .integrations-button {
-    padding: 12px 22px;
+    padding: 12px 25px;
+    background: #110f24;
+    color: #fff;
     border-radius: 8px;
-    background-color: rgba(2, 48, 71,0.86);
-    border: none;
+    /* background-color: rgba(31, 29, 43,1); */
+    border: 1px solid #393c49;
     color: white;
     font-size: 16px;
     margin-top: 10px;
