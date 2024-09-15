@@ -12,6 +12,7 @@
 body {
     font-family: "Lato", Helvetica, sans-serif;
     overflow-x: hidden;
+    position: relative;
 }
 
 ol.blank,
@@ -150,9 +151,8 @@ a {
     padding: 12px 40px;
     border-radius: 8px;
     font-size: 16px;
-    /* background: rgb(98,98,175);
-    background: linear-gradient(180deg, rgba(98,98,175,1) 16%, rgba(87,91,222,1) 62%); */
-    background-color: black;
+     background: rgb(98,98,175);
+    background: linear-gradient(180deg, rgba(98,98,175,1) 16%, rgba(87,91,222,1) 62%); 
     color: white;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     margin-top: 15px;
@@ -248,10 +248,9 @@ a {
 
 .integrations-container {
   margin-top: 80px;
+  width: 100vw;
   padding: 40px 20px;
-  /* background-color: rgb(238, 242, 252); */
   background-color: rgb(244, 244, 244); 
-  /* background-color: #f9f9f9;  */
 }
 
 .integrations-main-title {
@@ -274,7 +273,9 @@ a {
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border-radius: 10px;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .integrations-img-container  {
@@ -309,7 +310,7 @@ a {
 
 .integrations-text-container {
     padding: 20px 13px;
-    height: 190px;
+    height: 200px;
 }
 
 .integrations-title {
@@ -321,7 +322,7 @@ a {
 
 .integrations-p {
     color: rgba(2, 48, 71, 0.87); 
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 400;
     word-spacing: 1.5px;
 
@@ -346,7 +347,8 @@ a {
     color: #fff;
     border-radius: 8px;
     /* background-color: rgba(31, 29, 43,1); */
-    border: 1px solid #393c49;
+    /* border: 1px solid #393c49; */
+    background-color: rgb(2, 48, 71);
     color: white;
     font-size: 16px;
     margin-top: 10px;
