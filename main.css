@@ -41,16 +41,10 @@ a {
 }  
 
 .overlay-div{
-  
     filter: blur(0px);
     transition: all 2s ease-in-out;     
 }  
   
-.blur {
-    filter: blur(5px);
-    height: 100vh;
-    transition: all 2s ease-in-out;
-}
   
 .sidebar-container {
     transform: translateX(-100%);
@@ -84,6 +78,29 @@ a {
     font-size: 20px;
     margin-top: 25px;
     font-weight: 600;
+    position: relative;
+}
+
+.sidebar-p::after {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    transform-origin: right bottom;
+    transform: scaleX(0);
+    transition: transform 0.3s linear;
+    border-radius: 10px;
+    z-index: 20;
+}
+
+.sidebar-p:hover::after {
+    transform: scaleX(1);
+    transform-origin: left bottom;
+    transition: transform 0.3s linear;
 }
 
 .sidebar-closer {
@@ -165,7 +182,23 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px 20px 30px;
+    filter: blur(0px);
+    transition: filter 2s ease-in-out;     
+    /* transition: background-color 1s ease-in-out;      */
 }  
+
+.blur {
+    filter: blur(5px);
+    transition: all 2s ease-in-out;
+}
+
+.navbar-scrolled {
+    position: sticky;
+    top: 0;
+    padding: 5px 50px 5px 30px;
+    color: black;
+    z-index: 10;
+}
 
 .sidebar-svg-container {
     display: none;
@@ -184,11 +217,40 @@ a {
     max-height: 70px;
 }
 
+.logo-scrolled {
+    max-width: 60px;
+    max-height: 60px;
+}
+
+
 .navbar-p {
     font-size: 19px;
     font-weight: 600;
     color: white;
     word-spacing: 3px;
+    position: relative;
+}
+
+.navbar-p::after {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    transform-origin: right bottom;
+    transform: scaleX(0);
+    transition: transform 0.3s linear;
+    border-radius: 10px;
+    z-index: 20;
+}
+
+.navbar-p:hover::after {
+    transform: scaleX(1);
+  transform-origin: left bottom;
+  transition: transform 0.3s linear;
 }
 
 .logo-p-container {
@@ -309,8 +371,10 @@ a {
 }
 
 .integrations-text-container {
-    padding: 20px 13px;
-    height: 200px;
+    padding: 15px 15px;
+    height: 195px;
+    white-space: normal; 
+    word-wrap: break-word; 
 }
 
 .integrations-title {
@@ -325,13 +389,14 @@ a {
     font-size: 17px;
     font-weight: 400;
     word-spacing: 1.5px;
-
+    white-space: normal; 
+    word-wrap: break-word; 
 }
 
 .integrations-button-container {
     display: flex;
     justify-content: space-between;
-    padding: 15px 20px 22px 15px;
+    padding: 15px 22px 22px 15px;
     align-items: center;
     
 }
@@ -352,6 +417,7 @@ a {
     color: white;
     font-size: 16px;
     margin-top: 10px;
+    border: none;
     cursor: pointer;
 }
 

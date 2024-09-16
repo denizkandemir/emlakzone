@@ -1,7 +1,7 @@
 const integrations = [
     {
         title: "Kontrat Takibi",
-        text: "Emlak sektöründe kontrat takibi, kiralama ve satış süreçlerinin sorunsuz ilerlemesi için kritik öneme sahiptir. Doğru bir takip, anlaşmazlıkların önüne geçer, zamanında ödemeleri garanti altına alır ve süreçleri şeffaf hale getirir. Dijital yönetim, belge kaybını engeller.",
+        text: "Emlak sektöründe kontrat takibi, kiralama ve satış süreçlerinin sorunsuz ilerlemesi için kritik öneme sahiptir. Doğru bir takip, anlaşmazlıkların önüne geçer, zamanında ödemeleri garanti altına alır ve süreçleri şeffaf hale getirir. Dijital yönetim, belgelerin güvenle saklanmasını sağlayarak olası sorunları önler.",
         img: "imgs/contract-icon.png"
     },
 
@@ -26,7 +26,7 @@ const integrations = [
 
     {
         title: "Takvim",
-        text: "Emlak takvimi, kiralama ve satış süreçlerinde önemli tarihleri takip etmeyi kolaylaştırır. Kira ödemeleri, kontrat yenilemeleri, bakım hizmetleri gibi kritik olayları hatırlatarak, hem mülk sahiplerinin hem de kiracıların zamanında aksiyon almasını sağlar.",
+        text: "Emlak takvimi, kiralama ve satış süreçlerindeki önemli tarihleri takip etmeyi kolaylaştırarak, kira ödemeleri, kontrat yenilemeleri ve bakım hizmetleri gibi kritik olayları hatırlatır; bu sayede hem mülk sahipleri hem de kiracılar zamanında aksiyon alarak sorunsuz bir süreç yaşar.",
         img: "imgs/calender-icon.png"
     },
 
@@ -39,6 +39,7 @@ const integrations = [
 
 ]
 
+const navbar = document.querySelector("#navbar-container");
 
 function handleSidebar() {
     const sidebarOpener = document.querySelector("#sidebar-opener");
@@ -49,12 +50,14 @@ function handleSidebar() {
     sidebarOpener.addEventListener(("click") , () => {
        sidebar.classList.add("display-sidebar");
        overlay.classList.add("blur");
+       navbar.classList.add("blur");
        document.body.classList.add("no-scroll");
     });
 
     sidebarCloser.addEventListener(("click") , () => {
         sidebar.classList.remove("display-sidebar");
         overlay.classList.remove("blur");
+        navbar.classList.remove("blur");
         document.body.classList.remove("no-scroll");
     });
 }
@@ -162,6 +165,19 @@ function handleQuestionDropdowns() {
         });
     })
 }
+
+
+const logo = document.querySelector("#logo");
+
+window.onscroll = function() {
+    if (window.scrollY > 0) {  
+        navbar.classList.add("navbar-scrolled");
+        logo.classList.add("logo-scrolled");
+    } else {
+        navbar.classList.remove("navbar-scrolled");
+        logo.classList.remove("logo-scrolled");
+    }
+};
 
 handleSidebar();
 handleIntegrations();
