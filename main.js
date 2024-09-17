@@ -167,18 +167,33 @@ function handleQuestionDropdowns() {
 }
 
 
-const logo = document.querySelector("#logo");
 
-window.onscroll = function() {
-    if (window.scrollY > 0) {  
-        navbar.classList.add("navbar-scrolled");
-        logo.classList.add("logo-scrolled");
-    } else {
-        navbar.classList.remove("navbar-scrolled");
-        logo.classList.remove("logo-scrolled");
-    }
-};
+const navbarStickyHandler = () => {
+    const logo = document.querySelector("#logo");
+    const logoTitle = document.querySelector("#logo-p");
+    const navbarLinks = document.querySelectorAll("#navbar-p");
 
+    window.onscroll = function() {
+        if (window.scrollY > 0) {  
+            navbar.classList.add("navbar-scrolled");
+            logo.classList.add("logo-scrolled");
+            logoTitle.classList.add("logo-p-scrolled");
+            navbarLinks.forEach((link) => {
+                link.classList.add("navbar-p-scrolled");
+            });
+        } else {
+            navbar.classList.remove("navbar-scrolled");
+            logo.classList.remove("logo-scrolled");
+            logoTitle.classList.remove("logo-p-scrolled");
+            navbarLinks.forEach((link) => {
+                link.classList.remove("navbar-p-scrolled");
+            });
+        }
+    };
+}
+
+
+navbarStickyHandler();
 handleSidebar();
 handleIntegrations();
 handleQuestionDropdowns();
