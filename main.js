@@ -193,7 +193,7 @@ const navbarStickyHandler = () => {
 }
 
 
-// navbarStickyHandler();
-// handleSidebar();
-// handleIntegrations();
-// handleQuestionDropdowns();
+navbarStickyHandler();
+handleSidebar();
+handleIntegrations();
+handleQuestionDropdowns();
